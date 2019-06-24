@@ -39,8 +39,8 @@ export class CurrencyService {
       .pipe(map(({ rates }) => this.fixDecimal(rates[toCurrency] * amount)));
   }
 
-  // api need number with 6 digits
+  // fix 2 digits
   fixDecimal(n: number): number {
-    return Number(n.toFixed(5));
+    return Number(n.toFixed(2));
   }
 }
