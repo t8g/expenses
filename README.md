@@ -9,6 +9,8 @@ Missing stuff :
 - [ ] Add more tests (only Pagination component is partialy tested)
 - [ ] Add i18n
 - [ ] Routing could be a good idea (including pagination & edition)
+- [ ] Add validator for comment
+- [ ] Add validator for amount (max via API to 6 digits)
 
 ![expenses](expenses.gif)
 
