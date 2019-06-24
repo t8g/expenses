@@ -65,7 +65,7 @@ yarn test
 ## Built With
 
 - [Angular](https://angular.io) - The web framework used
-- [Angular CLI](ttps://cli.angular.io) - Angular CLI
+- [Angular CLI](https://cli.angular.io) - Angular CLI
 - [Angular Material](https://material.angular.io) - Material Design components for Angular
 - [Json-server](https://github.com/typicode/json-server) - Zero config JSON api server
 
