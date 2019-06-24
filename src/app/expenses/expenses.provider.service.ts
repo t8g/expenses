@@ -7,6 +7,8 @@ import { map, catchError, tap } from "rxjs/operators";
 
 const { url, token } = environment.expenseApi;
 
+console.log(token);
+
 const headers: HttpHeaders = new HttpHeaders({
   Authorization: `Bearer ${token}`
 });
