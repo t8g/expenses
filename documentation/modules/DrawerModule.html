@@ -106,6 +106,9 @@
         <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
     </li>
     <li >
+        <a href="#readme" role="tab" id="readme-tab" data-toggle="tab" data-link="readme">README</a>
+    </li>
+    <li >
         <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
     </li>
 </ul>
@@ -121,6 +124,13 @@
         </p>
 
 
+        <p class="comment">
+            <h3>Description</h3>
+        </p>
+        <p class="comment">
+            <p><strong>Display a right sided drawer with a given component.</strong></p>
+
+        </p>
 
 
         <div class="container-fluid module">
@@ -149,6 +159,31 @@
 
     </div>
 
+    <div class="tab-pane fade " id="c-readme">
+        <p><p><em>Usage:</em></p>
+<p>Import DrawerModule in your module</p>
+<p>```javascript
+import { DrawerModule } from &quot;../drawer/drawer.module&quot;;</p>
+<p>@NgModule {
+  imports: [ DrawerModule ],
+  entryComponents: [ CardComponent ] // local component displayed in the drawer
+}
+```</p>
+<p>Use DrawerService &amp; DrawerRef to open drawer with your component inside (here CardComponent)</p>
+<p><code>javascript
+const drawerRef: DrawerRef&lt;CardComponent&gt; = this.drawer.open(
+  CardComponent,
+  expense
+);
+drawerRef.onModalClose().subscribe((response: string) =&gt; {
+  // the response type depends on CardComponent return
+});</code></p>
+<p>Do not forget to add CardComponent to entryComponents</p>
+<p>Inside CardComponent you can use DrawerService.close(response) to close the drawer</p>
+<p><code>javascript
+this.drawerService.close(&quot;OK&quot;);</code></p>
+</p>
+    </div>
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &quot;@angular/core&quot;;
@@ -156,6 +191,9 @@ import { CommonModule } from &quot;@angular/common&quot;;
 import { DrawerComponent } from &quot;./drawer/drawer.component&quot;;
 import { PortalModule } from &quot;@angular/cdk/portal&quot;;
 
+/**
+ * **Display a right sided drawer with a given component.**
+ */
 @NgModule({
   declarations: [DrawerComponent],
   imports: [CommonModule, PortalModule],

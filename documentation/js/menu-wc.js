@@ -96,13 +96,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/DrawerModule.html" data-type="entity-link">DrawerModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-DrawerModule-bd3a1ef09b358bd1ca813805fe14fd19"' : 'data-target="#xs-components-links-module-DrawerModule-bd3a1ef09b358bd1ca813805fe14fd19"' }>
+                                            'data-target="#components-links-module-DrawerModule-bd5f97126060952880815ca1542db96f"' : 'data-target="#xs-components-links-module-DrawerModule-bd5f97126060952880815ca1542db96f"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DrawerModule-bd3a1ef09b358bd1ca813805fe14fd19"' :
-                                            'id="xs-components-links-module-DrawerModule-bd3a1ef09b358bd1ca813805fe14fd19"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-DrawerModule-bd5f97126060952880815ca1542db96f"' :
+                                            'id="xs-components-links-module-DrawerModule-bd5f97126060952880815ca1542db96f"' }>
                                             <li class="link">
                                                 <a href="components/DrawerComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">DrawerComponent</a>

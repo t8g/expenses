@@ -6,6 +6,9 @@ import {
 } from "@angular/core";
 import { Amount } from "../expense";
 
+/**
+ * Display informations (amount & currency) for a list of Amount { amount: number, currency: string }
+ */
 @Component({
   selector: "t8g-amount",
   templateUrl: "./amount.component.html",

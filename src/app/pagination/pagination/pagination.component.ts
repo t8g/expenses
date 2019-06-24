@@ -7,6 +7,12 @@ import {
   OnChanges
 } from "@angular/core";
 
+/**
+ * Simple pagination
+ *
+ * - prev & next
+ * - all pages are displayed
+ */
 @Component({
   selector: "t8g-pagination",
   templateUrl: "./pagination.component.html",

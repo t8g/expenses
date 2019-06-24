@@ -7,6 +7,9 @@ import { CardComponent } from "../card/card.component";
 import uuid from "uuid/v4";
 import { tap, map } from "rxjs/operators";
 
+/**
+ * List of expenses
+ */
 @Component({
   selector: "t8g-list",
   templateUrl: "./list.component.html",

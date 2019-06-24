@@ -32,6 +32,12 @@ And open a browser on `http://localhost:4200/`
 
 During development, The API is emulated thanks to [json-server](https://github.com/typicode/json-server)
 
+### Documentation
+
+Documentation is available inside `documentation` folder.
+
+Documentation can be rebuild with `npm run doc`
+
 ### Build
 
 Change the token in `environment.prod.ts` for expense api.
@@ -68,6 +74,7 @@ yarn test
 - [Angular CLI](https://cli.angular.io) - Angular CLI
 - [Angular Material](https://material.angular.io) - Material Design components for Angular
 - [Json-server](https://github.com/typicode/json-server) - Zero config JSON api server
+- [Compodoc](https://compodoc.app) - The missing documentation tool for your Angular application
 
 ## Authors
 

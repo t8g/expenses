@@ -10,6 +10,12 @@ import { ExpensesService } from "../expenses.service";
 import { Subscription, Observable } from "rxjs";
 import { CurrencyService } from "../currency.service";
 
+/**
+ * Container component for Expense form
+ *
+ * - Connection to ExpenseService for save
+ * - Close drawer on close (cancel or save)
+ */
 @Component({
   selector: "t8g-card",
   templateUrl: "./card.component.html",

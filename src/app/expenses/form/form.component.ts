@@ -35,6 +35,11 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 
+/**
+ * Expense form component
+ *
+ * - Validation
+ */
 @Component({
   selector: "t8g-form",
   templateUrl: "./form.component.html",
