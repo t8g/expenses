@@ -1,0 +1,83 @@
+<table class="">
+  <thead>
+    <tr>
+      <th [class]="sortClass('purchasedOn') | async">
+        <a (click)="sort('purchasedOn')">Date</a>
+      </th>
+      <th [class]="sortClass('nature') | async">
+        <a (click)="sort('nature')">Nature</a>
+      </th>
+      <th [class]="sortClass('convertedAmount.amount') | async">
+        <a (click)="sort('convertedAmount.amount')">Amount</a>
+      </th>
+      <th>Comment</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody *ngIf="expenses$ | async as expenses; else loading">
+    <ng-container *ngIf="expenses.length; else noexpenses">
+      <tr
+        *ngFor="let expense of expenses"
+        [class.updated]="updatedItemId === expense.id"
+      >
+        <td>{{ expense.purchasedOn | date }}</td>
+        <td>{{ expense.nature }}</td>
+        <td>
+          <t8g-amount
+            [amounts]="[expense.originalAmount, expense.convertedAmount]"
+          ></t8g-amount>
+        </td>
+        <td>{{ expense.comment }}</td>
+        <td class="right">
+          <button
+            mat-flat-button
+            color="primary"
+            (click)="editExpense(expense)"
+          >
+            Edit</button
+          >&nbsp;
+          <t8g-confirm-button (onConfirm)="removeExpense(expense)"
+            >Remove</t8g-confirm-button
+          >
+        </td>
+      </tr>
+    </ng-container>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <th colspan="4">
+        <t8g-pagination
+          [currentPage]="page$ | async"
+          [pageCount]="pageCount$ | async"
+          (pageChange)="pageChange($event)"
+        ></t8g-pagination>
+      </th>
+      <th class="right">
+        <button
+          type="button"
+          mat-flat-button
+          color="primary"
+          (click)="addExpense()"
+        >
+          Add an expense
+        </button>
+      </th>
+    </tr>
+  </tfoot>
+</table>
+
+<ng-template #loading>
+  <tbody>
+    <tr>
+      <td colspan="5">Loading ...</td>
+    </tr>
+  </tbody>
+</ng-template>
+
+<ng-template #noexpenses>
+  <tr>
+    <td colspan="5">No expenses, please create one.</td>
+  </tr>
+</ng-template>

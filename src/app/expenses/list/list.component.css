@@ -1,0 +1,83 @@
+table,
+th,
+td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+table > tbody > tr {
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+
+table > tbody > tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  opacity: 1;
+}
+
+td,
+th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+th.right,
+td.right {
+  text-align: right;
+}
+
+tfoot tr {
+  border: none;
+}
+
+@keyframes updated {
+  from {
+    background-color: #3f51b5;
+    opacity: 0.5;
+  }
+  to {
+    background-color: inherit;
+    opacity: 1;
+  }
+}
+.updated {
+  animation: updated 1s;
+}
+
+th a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+th:after {
+  font-weight: 200;
+}
+th.asc:after {
+  content: " \2193";
+}
+th.desc:after {
+  content: " \2191";
+}
+
+t8g-amount {
+  transform: scale(0.8);
+  display: block;
+  margin-left: -25px;
+}

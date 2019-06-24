@@ -1,0 +1,7 @@
+<div class="drawer-overlay" [class.open]="open"></div>
+<aside class="menu drawer" [class.open]="open">
+  <div class="close" (click)="close()"></div>
+  <section class="section">
+    <ng-template cdkPortalOutlet></ng-template>
+  </section>
+</aside>

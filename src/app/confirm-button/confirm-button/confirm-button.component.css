@@ -1,0 +1,17 @@
+button.one {
+  left: 0;
+}
+button.closed {
+  display: none;
+}
+span {
+  display: none;
+}
+span.closed {
+  display: inline;
+}
+
+div {
+  display: inline;
+  overflow: hidden;
+}

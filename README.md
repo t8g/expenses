@@ -1,27 +1,78 @@
-# Loc
+# Expenses
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.3.
+Small and incomplete SPA (Single Page Application) for hiring test.
 
-## Development server
+Object: Using a given API, create a SPA to enter expenses for a business trip.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Missing stuff :
 
-## Code scaffolding
+- [ ] Add more tests (only Pagination component is partialy tested)
+- [ ] Add i18n
+- [ ] Routing could be a good idea (including pagination & edition)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![expenses](expenses.gif)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Development
 
-## Running unit tests
+With NPM
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+npm install && npm start
+```
 
-## Running end-to-end tests
+With yarn
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+```
+yarn && yarn start
+```
 
-## Further help
+And open a browser on `http://localhost:4200/`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+During development, The API is emulated thanks to [json-server](https://github.com/typicode/json-server)
+
+### Build
+
+Change the token in `environment.prod.ts` for expense api.
+
+With NPM
+
+```
+npm run build
+```
+
+With yarn
+
+```
+yarn build
+```
+
+## Running the tests
+
+With NPM
+
+```
+npm run test
+```
+
+With yarn
+
+```
+yarn test
+```
+
+## Built With
+
+- [Angular](https://angular.io) - The web framework used
+- [Angular CLI](ttps://cli.angular.io) - Angular CLI
+- [Angular Material](https://material.angular.io) - Material Design components for Angular
+- [Json-server](https://github.com/typicode/json-server) - Zero config JSON api server
+
+## Authors
+
+- **Thomas Moyse** - [t8g](https://github.com/t8g)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details

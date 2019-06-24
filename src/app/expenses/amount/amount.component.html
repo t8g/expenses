@@ -1,0 +1,5 @@
+<mat-chip-list aria-orientation="horizontal">
+  <mat-chip *ngFor="let amount of amounts">
+    {{ amount.amount | currency: amount.currency:"symbol":undefined:"fr" }}
+  </mat-chip>
+</mat-chip-list>

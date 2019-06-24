@@ -1,0 +1,7 @@
+<h3>Edit this expense</h3>
+<t8g-form
+  [expense]="expense"
+  [currencies]="currencies$ | async"
+  (onCancel)="cancel()"
+  (onSave)="save($event)"
+></t8g-form>

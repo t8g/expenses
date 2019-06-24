@@ -1,0 +1,1174 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>expenses documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">expenses documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>ListComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/expenses/list/list.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+            <tr>
+                <td class="col-md-3">changeDetection</td>
+                <td class="col-md-9"><code>ChangeDetectionStrategy.OnPush</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>t8g-list</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./list.component.css</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./list.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#expenses$">expenses$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#page$">page$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#pageCount$">pageCount$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#updatedItemId">updatedItemId</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#addExpense">addExpense</a>
+                            </li>
+                            <li>
+                                <a href="#editExpense">editExpense</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#pageChange">pageChange</a>
+                            </li>
+                            <li>
+                                <a href="#removeExpense">removeExpense</a>
+                            </li>
+                            <li>
+                                <a href="#sort">sort</a>
+                            </li>
+                            <li>
+                                <a href="#sortClass">sortClass</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(expensesService: <a href="../injectables/ExpensesService.html">ExpensesService</a>, drawer: <a href="../injectables/DrawerService.html">DrawerService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/expenses/list/list.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>expensesService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/ExpensesService.html" target="_self" >ExpensesService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>drawer</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/DrawerService.html" target="_self" >DrawerService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addExpense"></a>
+                    <span class="name">
+                        <b>
+                            addExpense
+                        </b>
+                        <a href="#addExpense"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>addExpense()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="41"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:41</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="editExpense"></a>
+                    <span class="name">
+                        <b>
+                            editExpense
+                        </b>
+                        <a href="#editExpense"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>editExpense(expense: <a href="../interfaces/Expense.html">Expense</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:31</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>expense</td>
+                                    <td>
+                                                <code><a href="../interfaces/Expense.html" target="_self" >Expense</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="27"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:27</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="pageChange"></a>
+                    <span class="name">
+                        <b>
+                            pageChange
+                        </b>
+                        <a href="#pageChange"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>pageChange(page: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="72"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:72</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>page</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="removeExpense"></a>
+                    <span class="name">
+                        <b>
+                            removeExpense
+                        </b>
+                        <a href="#removeExpense"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>removeExpense(expense: <a href="../interfaces/Expense.html">Expense</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="58"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:58</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>expense</td>
+                                    <td>
+                                                <code><a href="../interfaces/Expense.html" target="_self" >Expense</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sort"></a>
+                    <span class="name">
+                        <b>
+                            sort
+                        </b>
+                        <a href="#sort"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sort(by)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="62"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:62</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>by</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sortClass"></a>
+                    <span class="name">
+                        <b>
+                            sortClass
+                        </b>
+                        <a href="#sortClass"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sortClass(by)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="66"
+                            class="link-to-prism">src/app/expenses/list/list.component.ts:66</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>by</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>Observable&lt;string&gt;</code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="expenses$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            expenses$</b>
+                            <a href="#expenses$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Expense.html" target="_self" >Observable&lt;Expense[]&gt;</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.expensesService.expenses$</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/expenses/list/list.component.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="page$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            page$</b>
+                            <a href="#page$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;number&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.expensesService.page$</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="20" class="link-to-prism">src/app/expenses/list/list.component.ts:20</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="pageCount$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            pageCount$</b>
+                            <a href="#pageCount$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Observable&lt;number&gt;</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>this.expensesService.pageCount$</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="19" class="link-to-prism">src/app/expenses/list/list.component.ts:19</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="updatedItemId"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            updatedItemId</b>
+                            <a href="#updatedItemId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/expenses/list/list.component.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit, ChangeDetectionStrategy } from &quot;@angular/core&quot;;
+import { ExpensesService } from &quot;../expenses.service&quot;;
+import { Observable } from &quot;rxjs&quot;;
+import { Expense } from &quot;../expense&quot;;
+import { DrawerService, DrawerRef } from &quot;../../drawer/drawer.service&quot;;
+import { CardComponent } from &quot;../card/card.component&quot;;
+import uuid from &quot;uuid/v4&quot;;
+import { tap, map } from &quot;rxjs/operators&quot;;
+
+@Component({
+  selector: &quot;t8g-list&quot;,
+  templateUrl: &quot;./list.component.html&quot;,
+  styleUrls: [&quot;./list.component.css&quot;],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class ListComponent implements OnInit {
+  public expenses$: Observable&lt;Expense[]&gt; &#x3D; this.expensesService.expenses$;
+  public updatedItemId: string;
+  public pageCount$: Observable&lt;number&gt; &#x3D; this.expensesService.pageCount$;
+  public page$: Observable&lt;number&gt; &#x3D; this.expensesService.page$;
+
+  constructor(
+    private expensesService: ExpensesService,
+    private drawer: DrawerService
+  ) {}
+
+  ngOnInit() {
+    this.expensesService.fetchExpense({ page: 1 });
+  }
+
+  editExpense(expense: Expense) {
+    const drawerRef: DrawerRef&lt;CardComponent&gt; &#x3D; this.drawer.open(
+      CardComponent,
+      expense
+    );
+    drawerRef.onModalClose().subscribe((expense: Expense | null) &#x3D;&gt; {
+      this.updatedItemId &#x3D; expense &amp;&amp; expense.id;
+    });
+  }
+
+  addExpense() {
+    this.editExpense({
+      id: uuid(),
+      purchasedOn: new Date(),
+      comment: &quot;&quot;,
+      originalAmount: {
+        amount: 0,
+        currency: &quot;EUR&quot;
+      },
+      convertedAmount: {
+        amount: 0,
+        currency: &quot;EUR&quot;
+      },
+      nature: &quot;&quot;
+    });
+  }
+
+  removeExpense(expense: Expense) {
+    this.expensesService.removeExpense(expense);
+  }
+
+  sort(by) {
+    this.expensesService.sort(by);
+  }
+
+  sortClass(by): Observable&lt;string&gt; {
+    return this.expensesService.sort$.pipe(
+      map(({ sort, direction }) &#x3D;&gt; (sort !&#x3D;&#x3D; by ? &quot;&quot; : direction))
+    );
+  }
+
+  pageChange(page: number) {
+    this.expensesService.fetchExpense({ page });
+  }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;table class&#x3D;&quot;&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th [class]&#x3D;&quot;sortClass(&#x27;purchasedOn&#x27;) | async&quot;&gt;
+        &lt;a (click)&#x3D;&quot;sort(&#x27;purchasedOn&#x27;)&quot;&gt;Date&lt;/a&gt;
+      &lt;/th&gt;
+      &lt;th [class]&#x3D;&quot;sortClass(&#x27;nature&#x27;) | async&quot;&gt;
+        &lt;a (click)&#x3D;&quot;sort(&#x27;nature&#x27;)&quot;&gt;Nature&lt;/a&gt;
+      &lt;/th&gt;
+      &lt;th [class]&#x3D;&quot;sortClass(&#x27;convertedAmount.amount&#x27;) | async&quot;&gt;
+        &lt;a (click)&#x3D;&quot;sort(&#x27;convertedAmount.amount&#x27;)&quot;&gt;Amount&lt;/a&gt;
+      &lt;/th&gt;
+      &lt;th&gt;Comment&lt;/th&gt;
+      &lt;th&gt;&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+
+  &lt;tbody *ngIf&#x3D;&quot;expenses$ | async as expenses; else loading&quot;&gt;
+    &lt;ng-container *ngIf&#x3D;&quot;expenses.length; else noexpenses&quot;&gt;
+      &lt;tr
+        *ngFor&#x3D;&quot;let expense of expenses&quot;
+        [class.updated]&#x3D;&quot;updatedItemId &#x3D;&#x3D;&#x3D; expense.id&quot;
+      &gt;
+        &lt;td&gt;{{ expense.purchasedOn | date }}&lt;/td&gt;
+        &lt;td&gt;{{ expense.nature }}&lt;/td&gt;
+        &lt;td&gt;
+          &lt;t8g-amount
+            [amounts]&#x3D;&quot;[expense.originalAmount, expense.convertedAmount]&quot;
+          &gt;&lt;/t8g-amount&gt;
+        &lt;/td&gt;
+        &lt;td&gt;{{ expense.comment }}&lt;/td&gt;
+        &lt;td class&#x3D;&quot;right&quot;&gt;
+          &lt;button
+            mat-flat-button
+            color&#x3D;&quot;primary&quot;
+            (click)&#x3D;&quot;editExpense(expense)&quot;
+          &gt;
+            Edit&lt;/button
+          &gt;&amp;nbsp;
+          &lt;t8g-confirm-button (onConfirm)&#x3D;&quot;removeExpense(expense)&quot;
+            &gt;Remove&lt;/t8g-confirm-button
+          &gt;
+        &lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/ng-container&gt;
+  &lt;/tbody&gt;
+
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;th colspan&#x3D;&quot;4&quot;&gt;
+        &lt;t8g-pagination
+          [currentPage]&#x3D;&quot;page$ | async&quot;
+          [pageCount]&#x3D;&quot;pageCount$ | async&quot;
+          (pageChange)&#x3D;&quot;pageChange($event)&quot;
+        &gt;&lt;/t8g-pagination&gt;
+      &lt;/th&gt;
+      &lt;th class&#x3D;&quot;right&quot;&gt;
+        &lt;button
+          type&#x3D;&quot;button&quot;
+          mat-flat-button
+          color&#x3D;&quot;primary&quot;
+          (click)&#x3D;&quot;addExpense()&quot;
+        &gt;
+          Add an expense
+        &lt;/button&gt;
+      &lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+&lt;/table&gt;
+
+&lt;ng-template #loading&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td colspan&#x3D;&quot;5&quot;&gt;Loading ...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/ng-template&gt;
+
+&lt;ng-template #noexpenses&gt;
+  &lt;tr&gt;
+    &lt;td colspan&#x3D;&quot;5&quot;&gt;No expenses, please create one.&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/ng-template&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./list.component.css</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">table,
+th,
+td {
+  border: none;
+}
+
+table {
+  width: 100%;
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+thead {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+table &gt; tbody &gt; tr {
+  -webkit-transition: background-color 0.25s ease;
+  transition: background-color 0.25s ease;
+}
+
+table &gt; tbody &gt; tr:hover {
+  background-color: rgba(242, 242, 242, 0.5);
+}
+
+tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  opacity: 1;
+}
+
+td,
+th {
+  padding: 15px 5px;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+th.right,
+td.right {
+  text-align: right;
+}
+
+tfoot tr {
+  border: none;
+}
+
+@keyframes updated {
+  from {
+    background-color: #3f51b5;
+    opacity: 0.5;
+  }
+  to {
+    background-color: inherit;
+    opacity: 1;
+  }
+}
+.updated {
+  animation: updated 1s;
+}
+
+th a {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+th:after {
+  font-weight: 200;
+}
+th.asc:after {
+  content: &quot; \2193&quot;;
+}
+th.desc:after {
+  content: &quot; \2191&quot;;
+}
+
+t8g-amount {
+  transform: scale(0.8);
+  display: block;
+  margin-left: -25px;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><table class="">  <thead>    <tr>      <th [class]="sortClass(\'purchasedOn\') | async">        <a (click)="sort(\'purchasedOn\')">Date</a>      </th>      <th [class]="sortClass(\'nature\') | async">        <a (click)="sort(\'nature\')">Nature</a>      </th>      <th [class]="sortClass(\'convertedAmount.amount\') | async">        <a (click)="sort(\'convertedAmount.amount\')">Amount</a>      </th>      <th>Comment</th>      <th></th>    </tr>  </thead>  <tbody *ngIf="expenses$ | async as expenses; else loading">    <ng-container *ngIf="expenses.length; else noexpenses">      <tr        *ngFor="let expense of expenses"        [class.updated]="updatedItemId === expense.id"      >        <td>{{ expense.purchasedOn | date }}</td>        <td>{{ expense.nature }}</td>        <td>          <t8g-amount            [amounts]="[expense.originalAmount, expense.convertedAmount]"          ></t8g-amount>        </td>        <td>{{ expense.comment }}</td>        <td class="right">          <button            mat-flat-button            color="primary"            (click)="editExpense(expense)"          >            Edit</button          >&nbsp;          <t8g-confirm-button (onConfirm)="removeExpense(expense)"            >Remove</t8g-confirm-button          >        </td>      </tr>    </ng-container>  </tbody>  <tfoot>    <tr>      <th colspan="4">        <t8g-pagination          [currentPage]="page$ | async"          [pageCount]="pageCount$ | async"          (pageChange)="pageChange($event)"        ></t8g-pagination>      </th>      <th class="right">        <button          type="button"          mat-flat-button          color="primary"          (click)="addExpense()"        >          Add an expense        </button>      </th>    </tr>  </tfoot></table><ng-template #loading>  <tbody>    <tr>      <td colspan="5">Loading ...</td>    </tr>  </tbody></ng-template><ng-template #noexpenses>  <tr>    <td colspan="5">No expenses, please create one.</td>  </tr></ng-template></div>'
+    var COMPONENTS = [{'name': 'AmountComponent', 'selector': 't8g-amount'},{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CardComponent', 'selector': 't8g-card'},{'name': 'ConfirmButtonComponent', 'selector': 't8g-confirm-button'},{'name': 'DrawerComponent', 'selector': 't8g-drawer'},{'name': 'FormComponent', 'selector': 't8g-form'},{'name': 'ListComponent', 'selector': 't8g-list'},{'name': 'LoaderComponent', 'selector': 't8g-loader'},{'name': 'PaginationComponent', 'selector': 't8g-pagination'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ListComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'ListComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

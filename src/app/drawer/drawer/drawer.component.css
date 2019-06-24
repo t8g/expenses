@@ -1,0 +1,53 @@
+.drawer-overlay {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  background: #000;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s linear;
+}
+.drawer-overlay.open {
+  opacity: 0.2;
+  visibility: visible;
+}
+
+.drawer {
+  position: fixed;
+  z-index: 99;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  transform: translateX(200%);
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  display: grid;
+  grid-template-areas: "OVERLAY DRAWER";
+  grid-template-columns: 1fr 1fr;
+}
+
+@media screen and (max-width: 768px) {
+  .drawer {
+    grid-template-columns: 0fr 9fr;
+  }
+}
+
+.drawer.open {
+  transform: none;
+}
+
+.drawer section {
+  display: block;
+  flex-flow: column wrap;
+  background: #fff;
+  contain: content;
+  grid-area: "DRAWER";
+  box-shadow: 2px 0 7px #000;
+}
+.drawer .close {
+  display: block;
+  grid-area: "OVERLAY";
+}

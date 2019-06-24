@@ -1,0 +1,86 @@
+<form [formGroup]="form" novalidate>
+  <mat-form-field class="full-width">
+    <input
+      formControlName="purchasedOn"
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Date"
+    />
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field class="full-width">
+    <input
+      formControlName="nature"
+      matInput
+      placeholder="Nature"
+      [errorStateMatcher]="matcher"
+    />
+    <mat-hint>Mandatory, max 120 char</mat-hint>
+    <mat-error *ngIf="form.controls['nature'].hasError('maxlength')">
+      Too long
+    </mat-error>
+    <mat-error *ngIf="form.controls['nature'].hasError('required')">
+      Nature <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <table formGroupName="originalAmount">
+    <tr>
+      <td>
+        <mat-form-field class="full-width">
+          <input
+            type="number"
+            formControlName="amount"
+            matInput
+            placeholder="Original Amount"
+          />
+        </mat-form-field>
+      </td>
+      <td>
+        <mat-form-field class="full-width">
+          <mat-label>Currency</mat-label>
+          <mat-select formControlName="currency">
+            <mat-option *ngFor="let currency of currencies" [value]="currency">
+              {{ currency }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </td>
+    </tr>
+  </table>
+
+  <div *ngIf="displayConverted$ | async">
+    <div class="convertedAmount" [class.hidden]="loading">
+      Converted Amount
+      <t8g-amount
+        [amounts]="[form.controls['convertedAmount'].valueChanges | async]"
+      ></t8g-amount>
+    </div>
+    <div class="convertedAmount" [class.hidden]="!loading">
+      <t8g-loader></t8g-loader>
+    </div>
+  </div>
+
+  <mat-form-field class="full-width">
+    <textarea
+      formControlName="comment"
+      matInput
+      placeholder="Comment"
+    ></textarea>
+  </mat-form-field>
+
+  <button
+    type="submit"
+    mat-flat-button
+    color="primary"
+    (click)="save()"
+    [disabled]="form.invalid"
+  >
+    Save
+  </button>
+  <button type="button" mat-flat-button (click)="cancel()">
+    Cancel
+  </button>
+</form>
