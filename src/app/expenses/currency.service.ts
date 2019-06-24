@@ -36,6 +36,11 @@ export class CurrencyService {
     if (fromCurrency === toCurrency) return of(amount);
     return this.http
       .get<Rates>(`${currencyUrl}?base=${fromCurrency}&symbols=${toCurrency}`)
-      .pipe(map(({ rates }) => rates[toCurrency] * amount));
+      .pipe(map(({ rates }) => this.fixDecimal(rates[toCurrency] * amount)));
+  }
+
+  // api need number with 6 digits
+  fixDecimal(n: number): number {
+    return Number(n.toFixed(5));
   }
 }

@@ -113,6 +113,10 @@ export class FormComponent implements OnInit {
 
   save() {
     if (this.form.valid) {
+      // only keep 6 decimals
+      this.expense.originalAmount.amount = this.currencyService.fixDecimal(
+        this.expense.originalAmount.amount
+      );
       this.onSave.emit({
         ...this.expense,
         ...this.form.value
