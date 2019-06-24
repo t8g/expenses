@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "doc": "compodoc -p tsconfig.app.json"
+    "doc": "compodoc -p tsconfig.app.json",
+    "github": "ng build --prod --output-path docs --base-href /expenses/"
   },
   "private": true,
   "dependencies": {
